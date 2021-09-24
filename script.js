@@ -15,3 +15,15 @@ for(let i=0; i<numOfSquares; i++){
 
     container.appendChild(square);
 }
+
+let canvas = document.querySelectorAll('div.square');
+
+canvas.forEach(square => 
+    square.addEventListener('mouseover', 
+    changeColor,
+    {once: true, capture: false}
+));
+
+function changeColor(e){
+    e.target.style[`background-color`] = 'red';   
+}
